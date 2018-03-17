@@ -8,7 +8,7 @@ var sequelize = require("../config/connection.js");
 
 // Creates a "Party room" model that matches up with DB
 module.exports = function(sequelize, DataTypes) {
-    var User = sequelize.define("user", {
+    var Song = sequelize.define("song", {
         name: {
             type: Sequelize.STRING,
             allowNull: false,
@@ -22,10 +22,4 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         timestamps: false
     });
-    // Associating Room with users
-    User.associate = function(models) {
-        User.hasMany(models.Room, {});
-    };
-    return User;
-
 }

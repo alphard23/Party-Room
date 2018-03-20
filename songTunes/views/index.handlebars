@@ -1,0 +1,70 @@
+<div class="container">
+
+    <div class="row">
+        <img id="song-header-img" class="img-responsive center-block" src="assets/Music-Note-with-black-background-vector.jpg"/>
+        <h1 class="text-center">Let's Play Some Music!</h1>
+    </div>
+
+    <div class="row text-center">
+        <form method="POST" action="/songs/create" class="form-inline">
+            <div class="form-group">
+                <input type="hidden" name="devoured" value="0"/>
+                <label class="sr-only" for="song-input">Good song</label>
+                <input name="song_name" type="text" class="form-control" id="song-input" placeholder="Your song"/>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <br>
+
+    <div class="row text-center">
+        <div class="col-xs-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Your Songs</div>
+                <div id="songs-added" class="panel-body">
+
+                    <hr>
+
+                    {{#each songs}}
+                        {{#unless devoured}}
+                            <form method="POST" action="/songs/update/{{id}}?_method=PUT" class="form-inline">
+                                <div class="form-group">
+                                    <input type="hidden" name="devoured" value="1"/>
+                                    <label class="sr-only">Good song</label>
+                                    <p class="form-control-static">{{ song_name }}</p>
+                                </div>
+                                <button id="song-id{{id}}" type="submit" class="btn btn-default">Devour!</button>
+                                <hr>
+                            </form>
+                        {{/unless}}
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">Good Songs</div>
+                <div id="songs-devoured" class="panel-body">
+
+                    <hr>
+
+                    {{#each songs}}
+                        {{#if devoured}}
+                            <form method="POST" action="/songs/delete/{{id}}?_method=DELETE" class="form-inline">
+                                <div class="form-group">
+                                    <label class="sr-only">Good songs</label>
+                                    <p class="form-control-static">{{ song_name }}</p>
+                                </div>
+                                <button id="song-id{{id}}" type="submit" class="btn btn-default">Trash</button>
+                                <hr>
+                            </form>
+                        {{/if}}
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

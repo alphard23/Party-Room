@@ -16,11 +16,22 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1, 30]
             }
         },
-        created_at: {
-            type: DataTypes.DATE
+        createdAt: {
+            type: DataTypes.DATE,
+            field: 'beginTime',
+            defaultValue: sequelize.literal('NOW()')
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            field: 'beginTime',
+            defaultValue: sequelize.literal('NOW()')
         }
     }, {
-        timestamps: false
+        timestamps: true,
+        // created_at: {
+        //     type: DataTypes.DATE
+        // }
+        // timestamps: false
     });
     // Associating Room with users
     // User.associate = function(models) {

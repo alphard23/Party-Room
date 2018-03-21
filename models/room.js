@@ -52,18 +52,9 @@ module.exports = function(sequelize, DataTypes) {
             field: 'beginTime',
             defaultValue: sequelize.literal('NOW()')
         }
-        // created_at: {
-        //     type: DataTypes.DATE
-        // }
     }, {
         timestamps: true
     });
-    // Associating Room with users
-    // Room.associate = function(models) {
-    //     Room.belongsTo(models.User, {});
-    // };
     console.log('this is rooom!!! right before we export', Room);
     return Room;
 };
-// Syncs with DB
-// db.sync();clear

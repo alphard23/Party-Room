@@ -28,10 +28,6 @@ module.exports = function(sequelize, DataTypes) {
         },
     }, {
         timestamps: true,
-        // created_at: {
-        //     type: DataTypes.DATE
-        // }
-        // timestamps: true
     });
     return Song;
 

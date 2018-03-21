@@ -13,9 +13,4 @@ $(document).ready(function() {
             return;
         }
     }
-
-    // function for creating a room
-    function createRoom(roomName) {
-        $.post('api/room', roomName)
-    }
-});
+})

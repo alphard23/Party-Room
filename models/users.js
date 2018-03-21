@@ -28,15 +28,7 @@ module.exports = function(sequelize, DataTypes) {
         }
     }, {
         timestamps: true,
-        // created_at: {
-        //     type: DataTypes.DATE
-        // }
-        // timestamps: false
     });
-    // Associating Room with users
-    // User.associate = function(models) {
-    //     User.hasMany(models.Room, {});
-    // };
     return User;
 
 }

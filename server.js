@@ -15,8 +15,6 @@ var PORT = process.env.PORT || 8080;
 // Requiring our models for syncing
 var db = require("./models");
 
-// Sets up the Express app to handle data parsing
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
@@ -26,18 +24,8 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 
-require("./routes/html-routes.js")(app)
-
-// db.room.findAll({}).then(function(thingWeFound) {
-
-
-//         console.log('WE FOUND THIS !!!!', thingWeFound[0].dataValues);
-//     })
-// Routes
-// =============================================================
-// require("./routes/html-routes.js")(app);
-// require("./routes/author-api-routes.js")(app);
-// require("./routes/post-api-routes.js")(app);
+require("./routes/room-html-routes.js")(app)
+require("./routes/room-api-routes.js")(app)
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

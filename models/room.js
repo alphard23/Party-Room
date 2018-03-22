@@ -7,7 +7,6 @@
 // var sequelize = require("../config/connection.js");
 module.exports = function(sequelize, DataTypes) {
     // Creates a "Party room" model that matches up with DB
-    console.log('this is the sequelize!!!! in room!!!!', DataTypes);
     var Room = sequelize.define("room", {
         roomName: {
             type: DataTypes.STRING,
@@ -55,6 +54,5 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         timestamps: true
     });
-    console.log('this is rooom!!! right before we export', Room);
     return Room;
 };

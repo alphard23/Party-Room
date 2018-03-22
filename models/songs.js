@@ -16,16 +16,14 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1, 30]
             }
         },
-        createdAt: {
-            type: DataTypes.DATE,
-            field: 'beginTime',
-            defaultValue: sequelize.literal('NOW()')
+
+        likes: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0
         },
-        updatedAt: {
-            type: DataTypes.DATE,
-            field: 'beginTime',
-            defaultValue: sequelize.literal('NOW()')
-        },
+
+
     }, {
         timestamps: true,
     });

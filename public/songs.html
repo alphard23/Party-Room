@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>House Tunes</title>
+
+	<!-- reset -->
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<!-- Added link to the jQuery Library -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  
+<div class = "grid-container">    
+
+    <div class="number6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="navbar">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active"><a href="/">Home</a></li>
+                            <li role="presentation" class="active"><a href="/allRooms">Party Rooms</a></li>
+                            <li role="presentation" class="active"><a href="/songs">Your Party</a></li>												
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="number12">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <form>
+					        <div class="form-group">
+						        <label for="add-song"><h3>Add Song</h3></label>
+						        <input class="form-control add-song" id="add-song" type="text">
+							
+						        <button class="btn btn-primary" id="addSongButton" type="submit">Create</button>
+					        </div>		
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                        <div class="panel-heading"><h3>Songs</h3></div>
+                        <div class="panel-body">
+                        <tbody>
+                          <div class="addSongsHere" id="addSongsHere">
+                              <h5>ADD SONGS HERE</h5>
+                          </div>
+                        </tbody>
+                        </div>
+                </div>
+
+            </div>
+            <div class="col-md-4"></div>    
+        </div>
+    </div>
+
+
+
+<script src="../js/songs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</body>
+</html>

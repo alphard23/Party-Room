@@ -1,0 +1,77 @@
+html{
+    min-height: 100%;
+    position: relative;
+    color: #e50001;
+}
+
+body{
+    background: url(../images/music1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.number9 { grid-area: navbar; }
+.number10 { grid-area: youtube; }
+.number11 { grid-area: panel; }
+.number12 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'navbar navbar navbar navbar navbar navbar'
+    'youtube youtube youtube panel panel panel'
+    'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    background-size: cover;
+    padding: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.number1 .navbar{
+    text-align: center;
+    color: black;
+    opacity: 0.7;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.number10{
+    text-align: center;
+}
+
+.number11 .panel{
+    opacity: 0.8;
+}
+
+.number11 .panel-heading{
+    text-align: center;
+    color: #0a89ff;
+    font-size: 55px;
+    font-family: 'Rammetto One', cursive;
+}
+
+.number11 .panel-body{
+    text-align: justify center;
+    font-size: 30px;
+    font-family: 'Rammetto One', cursive;
+}
+
+.number11 .list-group{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.number5{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    opacity: 0.6;
+}

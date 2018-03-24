@@ -56,7 +56,7 @@ function renderPage(){
     
         console.log("songReturned: " + songReturned)
     
-        addSong.append("<div value='" +i+"'" + h3tag + songReturned + sh3tag + sdiv + button + "like" + sbutton + br); 
+        addSong.append("<div value='" +i+"'" + h3tag + songReturned + sh3tag + sdiv + button + "👍" + sbutton + br); 
         likeButton();       
     }
     

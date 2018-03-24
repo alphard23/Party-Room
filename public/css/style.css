@@ -177,3 +177,21 @@ Style sheet number 3 improv
     font-size: 55px;
     font-family: 'Rammetto One', cursive;
 }
+
+#addSongsHere{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Rammetto One', cursive;
+    color: black;
+}
+
+#addSongsHere #likeButton {
+    background: #09F;
+    width: 25%;
+    height: 60px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 32px;
+    border: 3px solid blue;
+    border-radius: 5px;
+   }

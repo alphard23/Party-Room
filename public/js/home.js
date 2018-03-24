@@ -17,7 +17,6 @@ $("#createButton").on("click", function(event) {
         data: newRoom 
     }).then (function(data) {
         console.log(data)
-        alert('test')
         window.location.replace('/songs');  
 
     })
@@ -33,14 +32,11 @@ $("#searchButton").on("click", function(event) {
         term:$("#search-party-input").val().trim()};
     
     
-    alert(searchTerm.term);
-
     $.ajax({
         type: "GET",
         url:  "/api/rooms/"+searchTerm.term
     }).then (function(data) {
         console.log(data);
-        alert('test2');
         window.location.replace('/allRooms');  
     });
 

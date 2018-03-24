@@ -21,7 +21,6 @@ $(document).ready(function(){
         data: chosenSong
     }).then(function(data){
         //console.log(data)
-        alert('ajax post then function')
 
         
         songArray.push(data);
@@ -45,7 +44,6 @@ function renderPage(){
     // var button = "<button class='likeButton' id='likeButton'>";
     var sbutton = "</button>";
 
-    alert("renderPage works");
         console.log(songArray);
 
         var addSong = $("#addSongsHere").html(div + sdiv + br);
